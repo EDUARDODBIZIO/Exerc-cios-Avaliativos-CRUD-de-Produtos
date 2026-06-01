@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.container {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #111;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+select, input, button {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    color: #111;
+}
+
+input {
+    flex: 1;
+    min-width: 160px;
+}
+
+button {
+    cursor: pointer;
+    background: #f4f4f4;
+}
+
+button:hover {
+    background: #e8e8e8;
+}
+
+.info {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.loading {
+    display: none;
+    color: #666;
+    font-size: 13px;
+}
+
+.error {
+    color: #c0392b;
+    font-size: 13px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    padding: 8px 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #222;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover td {
+    background: #fafafa;
+}
+
+.id {
+    font-family: monospace;
+    font-size: 12px;
+    color: #999;
+}
+
+.pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 9px;
+    border-radius: 99px;
+}
+
+.disponivel {
+    background: #eaf3de;
+    color: #3b6d11;
+}
+
+.emprestado {
+    background: #faeeda;
+    color: #854f0b;
+}
+
+.manutencao {
+    background: #fcebeb;
+    color: #a32d2d;
+}
+
+div#produtos table{
+    width:100%;
+    border-collapse:collapse;
+    background:#999999;
+    text-align:left;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+div#produtos th{
+    background:#111;
+    color:#ddd;
+    padding:12px;
+}
+
+div#produtos td{
+    padding:12px;
+    border-bottom:1px solid #e7dfdf;
+}
+
+div#produtos tr:nth-child(odd){
+    background:#afafaf;
+}
+
+div#produtos tr:nth-child(even){
+    background:#ece8e8;
+}
+
+div#produtos tr:hover{
+    background:#dad8d8;
+}
+
+#formProduto {
+    gap: 12px;
+    margin-bottom: 20px;
+}

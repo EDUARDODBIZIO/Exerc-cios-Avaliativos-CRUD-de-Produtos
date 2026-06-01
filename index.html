@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Consulta de Equipamentos</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- FORMULÁRIO -->
+    <form id="formProduto">
+
+        <h2>Cadastro / Edição</h2>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Nome"
+            required
+        />
+
+        <input
+            type="text"
+            id="descricao"
+            placeholder="Descrição"
+        />
+
+        <select id="tipo" required>
+
+            <option value="">
+                Selecione o tipo
+            </option>
+
+            <option value="notebook">Notebook</option>
+            <option value="projetor">Projetor</option>
+            <option value="kit">Kit</option>
+            <option value="cabo">Cabo</option>
+            <option value="webcam">Webcam</option>
+            <option value="microfone">Microfone</option>
+
+        </select>
+
+        <select id="status" required>
+
+            <option value="">
+                Selecione o status
+            </option>
+
+            <option value="disponivel">Disponível</option>
+            <option value="emprestado">Emprestado</option>
+            <option value="manutencao">Manutenção</option>
+
+        </select>
+
+        <button type="submit">
+            Salvar Produto
+        </button>
+
+    </form>
+
+    <h2>Consulta de equipamentos</h2>
+
+    <!-- FILTROS -->
+    <div class="controls">
+
+        <select id="statusFiltro">
+
+            <option value="">
+                Todos os status
+            </option>
+
+            <option value="disponivel">Disponível</option>
+            <option value="emprestado">Emprestado</option>
+            <option value="manutencao">Manutenção</option>
+
+        </select>
+
+        <select id="tipoFiltro">
+
+            <option value="">
+                Todos os tipos
+            </option>
+
+            <option value="notebook">Notebook</option>
+            <option value="projetor">Projetor</option>
+            <option value="kit">Kit</option>
+            <option value="cabo">Cabo</option>
+            <option value="webcam">Webcam</option>
+            <option value="microfone">Microfone</option>
+
+        </select>
+
+        <input
+            type="text"
+            id="buscaFiltro"
+            placeholder="Buscar por nome ou descrição"
+        />
+
+        <button type="button" onclick="buscar()">
+            Buscar
+        </button>
+
+        <button type="button" onclick="limpar()">
+            Limpar
+        </button>
+
+    </div>
+
+    <p class="loading" id="loading">Carregando…</p>
+
+    <p class="error" id="error"></p>
+
+    <p class="info">
+        Total: <span id="total">0</span>
+    </p>
+
+    <!-- TABELA -->
+    <div id="produtos">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Status</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="lista"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
